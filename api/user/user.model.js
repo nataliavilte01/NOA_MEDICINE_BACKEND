@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose'
 const options = {
     discriminatorKey: 'role'
 }
@@ -50,4 +50,4 @@ const UserSchema = new mongoose.Schema({
         type: String
     }
 }, options)
-module.exports = mongoose.models.User || mongoose.model('User', UserSchema);
+export default mongoose.models.User || mongoose.model('User', UserSchema);

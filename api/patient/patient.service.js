@@ -1,5 +1,5 @@
-const Patient = require ('./patient.model.js')
-const encryptedPassword = require ('../../utils/encrypted_password.js')
+import Patient from './patient.model.js'
+import encryptedPassword from '../../utils/encrypted_password.js'
 const patientService = {}
 patientService.createPatient = async (req)=>{
     const password = req.body.password;
@@ -66,4 +66,4 @@ patientService.deletePatient = async (req)=>{
         throw error;
     }
 }
-module.exports = patientService;
+export default patientService

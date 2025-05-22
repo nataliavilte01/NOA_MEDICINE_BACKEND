@@ -7,4 +7,4 @@ class StatusResponse{
         })
     }
 }
-module.exports = StatusResponse;
+export default StatusResponse

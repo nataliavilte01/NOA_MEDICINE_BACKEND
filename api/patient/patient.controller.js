@@ -1,6 +1,5 @@
-const { response } = require('express');
-const StatusResponse = require('../../utils/status_response');
-const patientService = require ('./patient.service')
+import StatusResponse from '../../utils/status_response.js';
+import patientService from '../patient/patient.service.js'
 const patientCtrl={};
 const statusResponse = new StatusResponse();
 
@@ -49,4 +48,4 @@ patientCtrl.deletePatient = async (req, res)=>{
     }
 }
 
-module.exports = patientCtrl;
+export default patientCtrl;

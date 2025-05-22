@@ -1,8 +1,9 @@
-const express = require('express');
-const cors = require ('cors')
+import express from 'express'
+import cors from 'cors'
+import patient_routes from '../api/patient/patient.route.js'
 const router = express.Router();
-
 router.use(cors());
 
-router.use ('/patient', require ('../api/patient/patient.route.js'));
-module.exports= router;
+router.use ('/patient', patient_routes);
+
+export default router

@@ -1,5 +1,6 @@
-require('dotenv').config('/.env')
-const bcrypt = require ('bcrypt')
+import dotenv from 'dotenv'
+dotenv.config('../')
+import bcrypt from 'bcrypt'
 const password ={}
 password.encriptar = async (inputPassword)=>{
     const regex= /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/
@@ -14,4 +15,4 @@ password.encriptar = async (inputPassword)=>{
         throw error;
     }
 }
-module.exports= password
+export default password
